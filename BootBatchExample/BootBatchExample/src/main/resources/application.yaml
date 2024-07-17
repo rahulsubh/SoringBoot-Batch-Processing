@@ -6,12 +6,14 @@ spring:
   sql:
     init:
       mode: always
-  batch:
-    jdbc:
-      initialize-schema: always
+
 
 
 # bath related configurations
+
+  batch:
+    jdbc:
+      initialize-schema: always
 
 
 
