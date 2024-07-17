@@ -13,7 +13,7 @@ public class CustomItemProcessor implements ItemProcessor<Product, Product> {
         try{
             int discountPer = Integer.parseInt(item.getDiscount().trim());
             double originalPrice = Double.parseDouble(item.getPrice().trim());
-            double discount = (discountPer/100)*originalPrice;
+            double discount = originalPrice * ((double) discountPer /100);
             double finalPrice = originalPrice - discount;
             item.setDiscountedPrice(String.valueOf(finalPrice));
         }catch (
